@@ -1,5 +1,5 @@
 const TaskItem = (props) => {
-  return;
+  return <li>{props.children}</li>;
 };
 
 export default TaskItem;

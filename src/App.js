@@ -4,7 +4,10 @@ import TaskInput from "./components/Input/TaskInput";
 import TaskList from "./components/List/TaskList";
 
 const App = () => {
-  const [tasks, setTasks] = useState(" ");
+  const [tasks, setTasks] = useState([
+    { text: "Do all exercises!", id: "g1" },
+    { text: "Finish the course!", id: "g2" },
+  ]);
 
   const addTaskHandler = (enteredText) => {
     setTasks((prevTasks) => {
