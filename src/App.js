@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { SectionForm } from "./AppStyles";
+import TaskInput from "./components/Input/TaskInput";
+import TaskList from "./components/List/TaskList";
 
 const App = () => {
   const [tasks, setTasks] = useState(" ");
 
   const addTaskHandler = (enteredText) => {
-    setTask((prevTasks) => {
+    setTasks((prevTasks) => {
       const updatedTasks = [...prevTasks];
       updatedTasks.unshift({ text: enteredText, id: Math.random().toString() });
       return updatedTasks;
     });
   };
+
+  let content = <p>No tasks found in your list. Maybe add a new one?</p>;
+
+  if (tasks.length > 0) {
+    // check if input is not blank
+    content = <TaskList items={tasks} />;
+  }
 
   return (
     <div>
