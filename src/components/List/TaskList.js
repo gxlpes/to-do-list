@@ -1,7 +1,7 @@
 import { useState } from "react";
-import TaskItem from "./components/item/TaskItem";
+import TaskItem from "../Item/TaskItem";
 
-const TaskInput = (props) => {
+const TaskList = (props) => {
   return (
     <ul>
       {props.items.map((task) => (
