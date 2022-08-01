@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div>
       <SectionForm id="form">
-        <TaskInput onAdd={addTaskHandler} />
+        <TaskInput onAddTask={addTaskHandler} />
       </SectionForm>
       <section id="taks">{content}</section>
     </div>

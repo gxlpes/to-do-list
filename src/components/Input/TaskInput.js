@@ -5,6 +5,15 @@ const TaskInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
   const [isValid, setIsValid] = useState(true);
 
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+    if (enteredValue.trim().length === 0) {
+      setIsValid(false);
+      return;
+    }
+    props.onAddTask(enteredValue);
+  };
+
   const taskInputHandler = (event) => {
     if (event.target.value.trim().length > 0) {
       setIsValid(true);
@@ -13,7 +22,7 @@ const TaskInput = (props) => {
   };
 
   return (
-    <StyledForm>
+    <StyledForm onSubmit={formSubmitHandler}>
       <div>
         <label>Task name:</label>
         <input type="text" onChange={taskInputHandler} />
