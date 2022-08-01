@@ -7,6 +7,8 @@ const TaskInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
+    event.target.reset();
+
     if (enteredValue.trim().length === 0) {
       setIsValid(false);
       return;

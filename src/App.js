@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { SectionForm, WrapperContent, createGlobalStyle } from "./AppStyles";
+import { SectionForm, WrapperContent } from "./AppStyles";
 import TaskInput from "./components/Input/TaskInput";
 import TaskList from "./components/List/TaskList";
 
 const App = () => {
   const [tasks, setTasks] = useState([
-    { text: "Do all exercises!", id: "g1" },
-    { text: "Finish the course!", id: "g2" },
+    { text: "Do all exercises", id: "g1" },
+    { text: "Finish the React course", id: "g2" },
   ]);
 
   const addTaskHandler = (enteredText) => {
