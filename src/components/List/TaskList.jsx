@@ -1,4 +1,3 @@
-import { useState } from "react";
 import TaskItem from "../Item/TaskItem";
 
 const TaskList = (props) => {
