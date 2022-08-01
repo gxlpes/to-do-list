@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SectionForm } from "./AppStyles";
+import { SectionForm, WrapperContent, createGlobalStyle } from "./AppStyles";
 import TaskInput from "./components/Input/TaskInput";
 import TaskList from "./components/List/TaskList";
 
@@ -25,12 +25,12 @@ const App = () => {
   }
 
   return (
-    <div>
+    <WrapperContent>
       <SectionForm id="form">
         <TaskInput onAddTask={addTaskHandler} />
       </SectionForm>
       <section id="taks">{content}</section>
-    </div>
+    </WrapperContent>
   );
 };
 
