@@ -17,11 +17,18 @@ const App = () => {
     });
   };
 
+  const deleteItemHandler = (taskId) => {
+    setTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter((task) => task.id !== taskId);
+      return updatedTasks;
+    });
+  };
+
   let content = <p>No tasks found in your list. Maybe add a new one?</p>;
 
   if (tasks.length > 0) {
     // check if input is not blank
-    content = <TaskList items={tasks} />;
+    content = <TaskList items={tasks} onDeleteItem={deleteItemHandler} />;
   }
 
   return (

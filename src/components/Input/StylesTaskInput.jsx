@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledForm = styled.form`
   background-color: purple;
+  width: 20rem;
   padding: 1rem;
   border-radius: 7px;
   display: flex;
@@ -14,6 +15,7 @@ export const StyledForm = styled.form`
   }
 
   input {
+    height: 2rem;
     margin-top: 0.5rem;
     border-radius: 2px;
     border: none;
@@ -27,9 +29,10 @@ export const StyledForm = styled.form`
   button {
     margin-top: 0.5rem;
     border: none;
-    width: 4rem;
+    padding: 0.2rem 2rem;
     border-radius: 2px;
     background-color: white;
+    text-align: center;
   }
 
   button:hover {

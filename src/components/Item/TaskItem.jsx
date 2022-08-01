@@ -1,7 +1,16 @@
-import { StyledLi } from "./StylesTaskItem";
+import { StyledLi, DeleteButton } from "./StylesTaskItem";
 
 const TaskItem = (props) => {
-  return <StyledLi>{props.children}</StyledLi>;
+  const deleteHandler = () => {
+    props.onDelete(props.id);
+  };
+
+  return (
+    <StyledLi>
+      {props.children}
+      <DeleteButton onClick={deleteHandler}>✕</DeleteButton>
+    </StyledLi>
+  );
 };
 
 export default TaskItem;
