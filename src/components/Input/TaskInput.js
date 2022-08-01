@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledForm } from "./StylesTaskInput";
+import { StyledForm, FormControl } from "./StylesTaskInput";
 
 const TaskInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
@@ -23,10 +23,10 @@ const TaskInput = (props) => {
 
   return (
     <StyledForm onSubmit={formSubmitHandler}>
-      <div>
+      <FormControl invalidProp={!isValid}>
         <label>Task name:</label>
         <input type="text" onChange={taskInputHandler} />
-      </div>
+      </FormControl>
       <button type="submit">Add</button>
     </StyledForm>
   );

@@ -1,8 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-  body {
+  * {
     font-family: "Poppins";
-    background-color: purple;
-  }
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
 `;

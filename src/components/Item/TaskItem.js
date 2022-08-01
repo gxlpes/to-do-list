@@ -1,5 +1,7 @@
+import { StyledLi } from "./StylesTaskItem";
+
 const TaskItem = (props) => {
-  return <li>{props.children}</li>;
+  return <StyledLi>{props.children}</StyledLi>;
 };
 
 export default TaskItem;
